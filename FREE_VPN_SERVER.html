@@ -101,17 +101,13 @@
         <h1>2. В приложении добавьте новый профиль,</h1>
         <h2>для этого отсканируйте QR код или скопируйте нажав на него</h2>
     </div>
-
     <div>
         <a href="javascript:void(0);" onclick="copyText()">
             <img src="https://i.ibb.co/QcWdYZ2/promo-key1.jpg" alt="promo-key1">
         </a>
     </div>
-
     <h1>3. Подключите VPN</h1>
-
     <button class="pdf-button" onclick="saveAsPDF()">Сохранить в PDF</button>
-
     <div class="footer">
         <h1>Также легко можно начать использовать ПЕРСОНАЛЬНЫЙ VPN СЕРВЕР</h1>
         <h2>Подключение от 20 до 50 устройств</h2>
@@ -120,10 +116,54 @@
         <h2>Не детектируемые и не блокируемые протоколы</h2>
         <h2>Стоимость 800 до 1200 рублей в месяц</h2>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script>
+        // Функция для копирования текста в буфер обмена
+        function copyText() {
+            const textToCopy = "vless://024f7c07-d475-4bbf-8c07-5d0902650e24@checkipuser.duckdns.org:443?type=tcp&security=reality&pbk=tOhaVjmHiF6kWSSTwxm-be_b992CZDrzJ9y5uIqRNgU&fp=chrome&sni=yahoo.com&sid=5404c3afc0452121&spx=%2F&flow=xtls-rprx-vision#vless-1-PERSONAL_SERVER_test_promo";
+            fallbackCopyTextToClipboard(textToCopy);
+        }
+
+        // Функция для копирования текста в буфер обмена с использованием textarea
+        function fallbackCopyTextToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.top = '0';
+            textArea.style.left = '0';
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            textArea.style.padding = '0';
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            textArea.style.background = 'transparent';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand('copy');
+                alert("Текст скопирован в буфер обмена!");
+            } catch (err) {
+                console.error("Ошибка копирования:", err);
+                alert('Не удалось скопировать текст');
+            }
+
+            document.body.removeChild(textArea);
+        }
+
+        // Функция для сохранения страницы в формате PDF
         function saveAsPDF() {
             const element = document.body;
             const options = {
-                
+                filename: 'promo_vpn_server.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(options).save();
+        }
+    </script>
+</body>
+</html>
