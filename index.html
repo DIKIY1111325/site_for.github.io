@@ -9,8 +9,8 @@
             margin: 0;
             padding: 0;
             background-image: url('https://i.ibb.co/w4fpKk1/image.png');
-            background-size: cover;
-            background-position: center;
+            background-size: cover; /* Заставить фон заполнять весь экран */
+            background-position: center; /* Центрировать фон */
             background-attachment: fixed;
             display: flex;
             flex-direction: column;
@@ -30,11 +30,13 @@
             font-size: 1.5em;
             margin-top: 30px;
             margin-bottom: 20px;
+            max-width: 90%; /* Ограничение ширины */
         }
         h2 {
-            font-size: 1.1em;
+            font-size: 1em; /* уменьшенный размер шрифта */
             margin-top: 10px;
             color: #003366;
+            max-width: 90%; /* Ограничение ширины */
         }
         .links {
             display: flex;
@@ -43,6 +45,7 @@
             gap: 15px;
             margin-top: 20px;
             padding: 0 10px;
+            max-width: 90%; /* Ограничение ширины */
         }
         a img {
             width: 120px;
@@ -57,10 +60,17 @@
             margin-top: 20px;
             line-height: 1.5;
             padding: 0 15px;
+            max-width: 90%; /* Ограничение ширины */
         }
         .footer {
             margin-top: 20px;
             padding: 10px;
+            max-width: 90%; /* Ограничение ширины */
+        }
+        .tariffs {
+            margin: 0 auto; /* Центрирование блока */
+            text-align: center; /* Центрирование текста */
+            max-width: 90%; /* Ограничение ширины */
         }
         /* Scale the elements by 25% when on desktop screens */
         @media screen and (min-width: 1024px) {
@@ -72,6 +82,7 @@
         /* Increase the size of "PRIVATE VPN SERVER" by 15% */
         .intro h1:nth-of-type(2) {
             font-size: 1.725em; /* Increase size by 15% */
+            max-width: 90%; /* Ограничение ширины */
         }
         /* Reduce the space between "PRIVATE VPN SERVER" and "ВЫПОЛНИВ" */
         .intro h1:nth-of-type(2) + h1 {
@@ -81,6 +92,19 @@
         .intro h1:nth-of-type(4),
         .intro h1:nth-of-type(5) {
             font-size: 1.5em;
+            max-width: 90%; /* Ограничение ширины */
+        }
+        /* Reduce the space between "Поддержка online" and "ТАРИФЫ" by 50% */
+        .footer h2:last-of-type {
+            margin-bottom: 5px;
+        }
+        /* Add padding between tariff items */
+        .tariffs h2 {
+            margin-bottom: 10px;
+            color: #003366; /* Цвет текста как на странице */
+        }
+        .tariffs h1, .tariffs h2 {
+            color: #003366; /* Сделать текст таким же цветом, как и остальной текст на странице */
         }
     </style>
 </head>
@@ -128,18 +152,18 @@
         <h1>VPN работает на сервере который можно арендовать</h1>
         <h1>СЕРВЕР VPN МОЖЕТ СТАТЬ ПЕРСОНАЛЬНО ВАШИМ</h1>
         <h2>подключение до 100 устройств</h2>
-        <h2>исключительно для вас, семьи, друзей и коллег</h1>
+        <h2>исключительно для вас, семьи, друзей и коллег</h2>
         <h2>полностью настроен для использования</h2>
-        <p> не требует дополнительных настроек, кроме смены пароля</p>
+        <p> не требует дополнительных настроек, кроме смены пароля</п>
         <h2>Поддержка online</h2>
-
-        <h2> </h2>
-        <h1>ТАРИФЫ</h1>
-        <h2>"ПРОМО СЕРВЕР" - ЦЕНА 1250 рублей /1 месяц / 5 устройств</h2>
-        <h2>"СЕРВЕР 3" - ЦЕНА 3450 рублей / 3 месяца / 10 устройств/ учтенная скидка в год 1200 рублей</h2>
-        <h2>"СЕРВЕР 6" - ЦЕНА 6000 рублей / 6 месяцев / 20 устройств/ учтенная скидка в год 3000 рублей</h2>
-        <h2>"СЕРВЕР 12" - ЦЕНА 10000 рублей / 12 месяцев / 30 устройств/ Поддержка online / учтенная скидка в год 5000 рублей</h2>
-        <h2>"СЕРВЕР 100" - ЦЕНА от 15000 рублей / 12 месяцев / от 50 устройств / поддержка online/ учтенная скидка: много сохраненного времени</h2>
+        <div class="tariffs">
+            <h1>ТАРИФЫ</h1>
+            <h2>"ПРОМО СЕРВЕР" - ЦЕНА 1250 рублей /1 месяц / 5 устройств</h2>
+            <h2>"СЕРВЕР 3" - ЦЕНА 3450 рублей / 3 месяца / 10 устройств/ учтенная скидка в год 1200 рублей</h2>
+            <h2>"СЕРВЕР 6" - ЦЕНА 6000 рублей / 6 месяцев / 20 устройств/ учтенная скидка в год 3000 рублей</h2>
+            <h2 style="color: #003366;">"СЕРВЕР 12" - ЦЕНА 10000 рублей / 12 месяцев / 30 устройств/ Поддержка online / учтенная скидка в год 5000 рублей</h2>
+            <h2 style="color: #003366;">"СЕРВЕР 100" - ЦЕНА от 15000 рублей / 12 месяцев / от 50 устройств / поддержка online/ учтенная скидка: много сохраненного времени</h2>
+        </div>
     </div>
     <script>
         // Функция для копирования текста в буфер обмена
