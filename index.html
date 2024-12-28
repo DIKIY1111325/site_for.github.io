@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ПРОМО VPN СЕРВЕР</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -16,8 +17,8 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            font-family: Arial, sans-serif;
-            color: #003366;
+            font-family: 'Roboto', sans-serif;
+            color: #00509E; /* Более светлый синий цвет */
             text-align: center;
             min-height: 100vh;
             overflow-x: hidden;
@@ -25,17 +26,18 @@
         h1, h2 {
             margin: 0;
             padding: 5px;
+            text-shadow: 1px 1px 0px #ffffff, -1px -1px 0px #ffffff, -1px 1px 0px #ffffff, 1px -1px 0px #ffffff; /* Белая обводка */
         }
         h1 {
-            font-size: 1.5em;
+            font-size: 2em; /* Увеличить размер */
             margin-top: 30px;
             margin-bottom: 20px;
             max-width: 90%; /* Ограничение ширины */
         }
         h2 {
-            font-size: 1em; /* уменьшенный размер шрифта */
+            font-size: 1.25em; /* Увеличить размер */
             margin-top: 10px;
-            color: #003366;
+            color: #00509E; /* Более светлый синий цвет */
             max-width: 90%; /* Ограничение ширины */
         }
         .links {
@@ -66,58 +68,58 @@
             margin-top: 20px;
             padding: 10px;
             max-width: 90%; /* Ограничение ширины */
+            text-align: center; /* Центрирование текста */
         }
         .tariffs {
             margin: 0 auto; /* Центрирование блока */
             text-align: center; /* Центрирование текста */
             max-width: 90%; /* Ограничение ширины */
+            font-size: 85%; /* Уменьшить размер на 15% */
         }
-        /* Scale the elements by 25% when on desktop screens */
         @media screen and (min-width: 1024px) {
             body {
                 transform: scale(1.25);
                 transform-origin: top center;
             }
         }
-        /* Increase the size of "PRIVATE VPN SERVER" by 15% */
         .intro h1:nth-of-type(2) {
-            font-size: 1.725em; /* Increase size by 15% */
+            font-size: 2.76em; /* Увеличить размер на 20% */
             max-width: 90%; /* Ограничение ширины */
         }
-        /* Reduce the space between "PRIVATE VPN SERVER" and "ВЫПОЛНИВ" */
-        .intro h1:nth-of-type(2) + h1 {
-            margin-top: -6px; /* Reduce the margin by 30% (original margin is 20px) */
-        }
-        /* Set the size of "ТРИ" and "ПРОСТЫХ ДЕЙСТВИЯ" to be the same as "ПРОМО СТРАНИЦА" */
+        .intro h1:nth-of-type(3),
         .intro h1:nth-of-type(4),
-        .intro h1:nth-of-type(5) {
-            font-size: 1.5em;
-            max-width: 90%; /* Ограничение ширины */
+        .intro h1:nth-of-type(5),
+        .intro h1:nth-of-type(6) {
+            font-size: 2em; /* Сделать размер одинаковым как у "ВЫ СМОЖЕТЕ ИСПОЛЬЗОВАТЬ VPN БЕСПЛАТНО" */
         }
-        /* Reduce the space between "Поддержка online" and "ТАРИФЫ" by 50% */
         .footer h2:last-of-type {
             margin-bottom: 5px;
         }
-        /* Add padding between tariff items */
         .tariffs h2 {
             margin-bottom: 10px;
-            color: #003366; /* Цвет текста как на странице */
+            color: #00509E; /* Цвет текста как на странице */
         }
         .tariffs h1, .tariffs h2 {
-            color: #003366; /* Сделать текст таким же цветом, как и остальной текст на странице */
+            color: #00509E; /* Сделать текст таким же цветом, как и остальной текст на странице */
+        }
+        .qr-info h1 {
+            margin-bottom: 5px; /* Уменьшить расстояние между строками */
+        }
+        .qr-info img {
+            transform: scale(1.2); /* Увеличить картинку на 20% */
         }
     </style>
 </head>
 <body>
     <div class="intro">
-        <h1>ПРОМО СТРАНИЦА</h1>
+        <h1>ПРОМО</h1>
         <h1>PRIVATE VPN SERVER</h1>
         <h1>ВЫПОЛНИВ</h1>
-        <h1>ТРИ</h1>
-        <h1>ПРОСТЫХ ДЕЙСТВИЯ</h1>
+        <h1>НЕСКОЛЬКО ПРОСТЫХ ДЕЙСТВИЙ</h1>
     </div>
     <h1>ВЫ СМОЖЕТЕ ИСПОЛЬЗОВАТЬ VPN БЕСПЛАТНО</h1>
-    <h1>1. Скачайте приложение для подключения VPN из официального магазина</h1>
+    <h1>скачайте приложение для подключения VPN</h1>
+    <h1>из официального магазина</h1>
             
     <div class="links">
         <a href="https://apps.apple.com/us/app/foxray/id6448898396" target="_blank">
@@ -136,33 +138,35 @@
             <img src="https://i.ibb.co/KbHCLPh/Hiddify-Windows.jpg" alt="Hiddify Windows">
         </a>
     </div>
-    <p>можно использовать и многие другие</p>
+    <h2>можно использовать и многие другие</h2>
+</div>
     <div class="qr-info">
-        <h1>2. В приложении добавьте новый профиль</h1>
-        <h2>Отсканируйте QR код или скопируйте нажав на него</h2>
-   
+        <h1>в приложении создайте новый профиль</h1>
+        <h1>отсканируйте QR код или скопируйте нажав</h1>
+        <br> <!-- Добавлено для увеличения расстояния -->
         <a href="javascript:void(0);" onclick="copyText()">
             <img src="https://i.ibb.co/QcWdYZ2/promo-key1.jpg" alt="promo-key1">
         </a>
     </div>
-    <h1>3. Подключите VPN</h1>
-    <h2>пожалуйста помните про тестовый период, он не очень большой</h2>
+    <h1>ПОДКЛЮЧИТЕ VPN</h1>
+    <h2>помните про тестовый период, он ограничен по времени</h2>
     <h2>поделитесь ссылкой с друзьями</h2>
+ 
     <div class="footer">
         <h1>VPN работает на сервере который можно арендовать</h1>
         <h1>СЕРВЕР VPN МОЖЕТ СТАТЬ ПЕРСОНАЛЬНО ВАШИМ</h1>
         <h2>подключение до 100 устройств</h2>
-        <h2>исключительно для вас, семьи, друзей и коллег</h2>
-        <h2>полностью настроен для использования</h2>
-        <p> не требует дополнительных настроек, кроме смены пароля</п>
-        <h2>Поддержка online</h2>
+        <h2>исключительно для вас, друзей и коллег</h2>
+        <h2>сервер полностью настроен для использования</h2>
+        <h2>не требует дополнительных настроек, кроме смены пароля</h2>
+        <h2>поддержка online</h2>
         <div class="tariffs">
-            <h1>ТАРИФЫ</h1>
+            <h2>ТАРИФЫ</h2>
             <h2>"ПРОМО СЕРВЕР" - ЦЕНА 1250 рублей /1 месяц / 5 устройств</h2>
-            <h2>"СЕРВЕР 3" - ЦЕНА 3450 рублей / 3 месяца / 10 устройств/ учтенная скидка в год 1200 рублей</h2>
-            <h2>"СЕРВЕР 6" - ЦЕНА 6000 рублей / 6 месяцев / 20 устройств/ учтенная скидка в год 3000 рублей</h2>
-            <h2 style="color: #003366;">"СЕРВЕР 12" - ЦЕНА 10000 рублей / 12 месяцев / 30 устройств/ Поддержка online / учтенная скидка в год 5000 рублей</h2>
-            <h2 style="color: #003366;">"СЕРВЕР 100" - ЦЕНА от 15000 рублей / 12 месяцев / от 50 устройств / поддержка online/ учтенная скидка: много сохраненного времени</h2>
+            <h2>"СЕРВЕР 3" - ЦЕНА 3450 рублей / 3 месяца / 10 устройств / учтенная скидка в год 1200 рублей</h2>
+            <h2>"СЕРВЕР 6" - ЦЕНА 6000 рублей / 6 месяцев / 20 устройств / учтенная скидка в год 3000 рублей</h2>
+            <h2>"СЕРВЕР 12" - ЦЕНА 10000 рублей / 12 месяцев / 30 устройств / Поддержка online / учтенная скидка в год 5000 рублей</h2>
+            <h2>"СЕРВЕР 100" - ЦЕНА от 15000 рублей / 12 месяцев / от 50 устройств / поддержка online/ учтенная скидка: ваше сэкономленное время</h2>
         </div>
     </div>
     <script>
