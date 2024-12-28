@@ -69,14 +69,29 @@
                 transform-origin: top center;
             }
         }
+        /* Increase the size of "PRIVATE VPN SERVER" by 15% */
+        .intro h1:nth-of-type(2) {
+            font-size: 1.725em; /* Increase size by 15% */
+        }
+        /* Reduce the space between "PRIVATE VPN SERVER" and "ВЫПОЛНИВ" */
+        .intro h1:nth-of-type(2) + h1 {
+            margin-top: -6px; /* Reduce the margin by 30% (original margin is 20px) */
+        }
+        /* Set the size of "ТРИ" and "ПРОСТЫХ ДЕЙСТВИЯ" to be the same as "ПРОМО СТРАНИЦА" */
+        .intro h1:nth-of-type(4),
+        .intro h1:nth-of-type(5) {
+            font-size: 1.5em;
+        }
     </style>
 </head>
 <body>
-    <h1>ТЕСТОВАЯ СТРАНИЦА ПРОЕКТА</h1>
-    <h1>PRIVATE VPN SERVER</h1>
-    <h1>ВЫПОЛНИВ</h1>
-    <h1>ТРИ</h1>
-    <h1>ПРОСТЫХ ДЕЙСТВИЯ</h1>
+    <div class="intro">
+        <h1>ПРОМО СТРАНИЦА</h1>
+        <h1>PRIVATE VPN SERVER</h1>
+        <h1>ВЫПОЛНИВ</h1>
+        <h1>ТРИ</h1>
+        <h1>ПРОСТЫХ ДЕЙСТВИЯ</h1>
+    </div>
     <h1>ВЫ СМОЖЕТЕ ИСПОЛЬЗОВАТЬ VPN БЕСПЛАТНО</h1>
     <h1>1. Скачайте приложение для подключения VPN из официального магазина</h1>
             
@@ -113,7 +128,7 @@
         <h1>VPN работает на сервере который можно арендовать</h1>
         <h1>СЕРВЕР VPN МОЖЕТ СТАТЬ ПЕРСОНАЛЬНО ВАШИМ</h1>
         <h2>подключение до 100 устройств</h2>
-        <h2>исключительно для Вас, семьи и друзей и коллег</h1>
+        <h2>исключительно для вас, семьи, друзей и коллег</h1>
         <h2>полностью настроен для использования</h2>
         <p> не требует дополнительных настроек, кроме смены пароля</p>
         <h2>Поддержка online</h2>
