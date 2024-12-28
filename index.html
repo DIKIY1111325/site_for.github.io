@@ -58,20 +58,6 @@
             line-height: 1.5;
             padding: 0 15px;
         }
-        .pdf-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #003366;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        .pdf-button:hover {
-            background-color: #0055aa;
-        }
         .footer {
             margin-top: 20px;
             padding: 10px;
@@ -107,7 +93,6 @@
         </a>
     </div>
     <h1>3. Подключите VPN</h1>
-    <button class="pdf-button" onclick="saveAsPDF()">Сохранить в PDF</button>
     <div class="footer">
         <h1>Также легко можно начать использовать ПЕРСОНАЛЬНЫЙ VPN СЕРВЕР</h1>
         <h2>Подключение от 20 до 50 устройств</h2>
@@ -116,7 +101,6 @@
         <h2>Не детектируемые и не блокируемые протоколы</h2>
         <h2>Стоимость 800 до 1200 рублей в месяц</h2>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <script>
         // Функция для копирования текста в буфер обмена
         function copyText() {
@@ -151,18 +135,6 @@
             }
 
             document.body.removeChild(textArea);
-        }
-
-        // Функция для сохранения страницы в формате PDF
-        function saveAsPDF() {
-            const element = document.body;
-            const options = {
-                filename: 'promo_vpn_server.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
-            html2pdf().from(element).set(options).save();
         }
     </script>
 </body>
